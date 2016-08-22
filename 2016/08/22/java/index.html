@@ -1,11 +1,17 @@
-<!DOCTYPE html>
-<html>
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   
-  <title>java | sunshine</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="谈谈final, finally, finalize的区别。final修饰1.1修饰类：该类不能派生子类，不能作为父类被继承。2.2修饰变量：保证在使用中变量的值不被改变。3.3修饰方法：方法只能使用，不能重载。final?修饰符（关键字）如果一个类被声明为final，意味着它不能再派生出新的子类，不能作为父类被继承。因此一个类不能既被声明为 abstract的，又被声明为final的。将变量或方">
+    <title>java | sunshine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="Reality">
+    
+
+    
+    <meta name="description" content="谈谈final, finally, finalize的区别。final修饰1.1修饰类：该类不能派生子类，不能作为父类被继承。2.2修饰变量：保证在使用中变量的值不被改变。3.3修饰方法：方法只能使用，不能重载。final?修饰符（关键字）如果一个类被声明为final，意味着它不能再派生出新的子类，不能作为父类被继承。因此一个类不能既被声明为 abstract的，又被声明为final的。将变量或方">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java">
 <meta property="og:url" content="http://yoursite.com/2016/08/22/java/index.html">
@@ -15,81 +21,86 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java">
 <meta name="twitter:description" content="谈谈final, finally, finalize的区别。final修饰1.1修饰类：该类不能派生子类，不能作为父类被继承。2.2修饰变量：保证在使用中变量的值不被改变。3.3修饰方法：方法只能使用，不能重载。final?修饰符（关键字）如果一个类被声明为final，意味着它不能再派生出新的子类，不能作为父类被继承。因此一个类不能既被声明为 abstract的，又被声明为final的。将变量或方">
-  
-    <link rel="alternate" href="/atom.xml" title="sunshine" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  
 
+    
+    <link rel="alternative" href="/atom.xml" title="sunshine" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">sunshine</a>
-      </h1>
+  <body>
+    <header>
       
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">成长，长成自己的样子</a>
-        </h2>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="sunshine" title="sunshine"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="sunshine">sunshine</a></h1>
+				<h2 class="blog-motto">成长，长成自己的样子</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+						<li><a href="/about">About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:yoursite.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/08/22/java/" title="java" itemprop="url">java</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Reality" target="_blank" itemprop="author">Reality</a>
+		
+  <p class="article-time">
+    <time datetime="2016-08-22T05:45:44.000Z" itemprop="datePublished"> 发表于 2016-08-22</time>
+    
+  </p>
 </header>
-      <div class="outer">
-        <section id="main"><article id="post-java" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/08/22/java/" class="article-date">
-  <time datetime="2016-08-22T05:45:44.000Z" itemprop="datePublished">2016-08-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      java
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="谈谈final-finally-finalize的区别。"><a href="#谈谈final-finally-finalize的区别。" class="headerlink" title="谈谈final, finally, finalize的区别。"></a>谈谈final, finally, finalize的区别。</h1><h2 id="final修饰"><a href="#final修饰" class="headerlink" title="final修饰"></a>final修饰</h2><h3 id="1-1修饰类：该类不能派生子类，不能作为父类被继承。"><a href="#1-1修饰类：该类不能派生子类，不能作为父类被继承。" class="headerlink" title="1.1修饰类：该类不能派生子类，不能作为父类被继承。"></a>1.1修饰类：该类不能派生子类，不能作为父类被继承。</h3><h3 id="2-2修饰变量：保证在使用中变量的值不被改变。"><a href="#2-2修饰变量：保证在使用中变量的值不被改变。" class="headerlink" title="2.2修饰变量：保证在使用中变量的值不被改变。"></a>2.2修饰变量：保证在使用中变量的值不被改变。</h3><h3 id="3-3修饰方法：方法只能使用，不能重载。"><a href="#3-3修饰方法：方法只能使用，不能重载。" class="headerlink" title="3.3修饰方法：方法只能使用，不能重载。"></a>3.3修饰方法：方法只能使用，不能重载。</h3><p>final?修饰符（关键字）如果一个类被声明为final，意味着它不能再派生出新的子类，不能作为父类被继承。因此一个类不能既被声明为 abstract的，又被声明为final的。将变量或方法声明为final，可以保证它们在使用中不被改变。被声明为final的变量必须在声明时给定 初值，而在以后的引用中只能读取，不可修改。被声明为final的方法也同样只能使用，不能重载. </p>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#谈谈final-finally-finalize的区别。"><span class="toc-number">1.</span> <span class="toc-text">谈谈final, finally, finalize的区别。</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#final修饰"><span class="toc-number">1.1.</span> <span class="toc-text">final修饰</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1修饰类：该类不能派生子类，不能作为父类被继承。"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1修饰类：该类不能派生子类，不能作为父类被继承。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2修饰变量：保证在使用中变量的值不被改变。"><span class="toc-number">1.1.2.</span> <span class="toc-text">2.2修饰变量：保证在使用中变量的值不被改变。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3修饰方法：方法只能使用，不能重载。"><span class="toc-number">1.1.3.</span> <span class="toc-text">3.3修饰方法：方法只能使用，不能重载。</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Anonymous-Inner-Class-匿名内部类-是否可以extends-继承-其它类，是否可以implements-实现-interface-接口"><span class="toc-number">2.</span> <span class="toc-text">Anonymous Inner Class (匿名内部类) 是否可以extends(继承)其它类，是否可以implements(实现)interface(接口)?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#amp-和-amp-amp-的区别。"><span class="toc-number">3.</span> <span class="toc-text">&和&&的区别。</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Collection-和-Collections的区别。"><span class="toc-number">4.</span> <span class="toc-text">Collection 和 Collections的区别。</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#GC是什么-为什么要有GC-基础-。"><span class="toc-number">5.</span> <span class="toc-text">GC是什么? 为什么要有GC? (基础)。</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#sleep-和-wait-有什么区别-搞线程的最爱"><span class="toc-number">6.</span> <span class="toc-text">sleep() 和 wait() 有什么区别? 搞线程的最爱</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Overload和Override的区别。Overloaded的方法是否可以改变返回值的类型"><span class="toc-number">7.</span> <span class="toc-text">Overload和Override的区别。Overloaded的方法是否可以改变返回值的类型?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Set里的元素是不能重复的，那么用什么方法来区分重复与否呢-是用-还是equals-它们有何区别"><span class="toc-number">8.</span> <span class="toc-text">Set里的元素是不能重复的，那么用什么方法来区分重复与否呢? 是用==还是equals()? 它们有何区别?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#abstract-class和interface有什么区别"><span class="toc-number">9.</span> <span class="toc-text">abstract class和interface有什么区别?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#是否可以继承String类"><span class="toc-number">10.</span> <span class="toc-text">是否可以继承String类?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#try-里有一个return语句，那么紧跟在这个try后的finally-里的code会不会被执行，什么时候被执行，在return前还是后"><span class="toc-number">11.</span> <span class="toc-text">try {}里有一个return语句，那么紧跟在这个try后的finally {}里的code会不会被执行，什么时候被执行，在return前还是后?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#编程题-用最有效率的方法算出2乘以8等於几"><span class="toc-number">12.</span> <span class="toc-text">编程题: 用最有效率的方法算出2乘以8等於几?</span></a></li></ol>
+		
+		</div>
+		
+		<h1 id="谈谈final-finally-finalize的区别。"><a href="#谈谈final-finally-finalize的区别。" class="headerlink" title="谈谈final, finally, finalize的区别。"></a>谈谈final, finally, finalize的区别。</h1><h2 id="final修饰"><a href="#final修饰" class="headerlink" title="final修饰"></a>final修饰</h2><h3 id="1-1修饰类：该类不能派生子类，不能作为父类被继承。"><a href="#1-1修饰类：该类不能派生子类，不能作为父类被继承。" class="headerlink" title="1.1修饰类：该类不能派生子类，不能作为父类被继承。"></a>1.1修饰类：该类不能派生子类，不能作为父类被继承。</h3><h3 id="2-2修饰变量：保证在使用中变量的值不被改变。"><a href="#2-2修饰变量：保证在使用中变量的值不被改变。" class="headerlink" title="2.2修饰变量：保证在使用中变量的值不被改变。"></a>2.2修饰变量：保证在使用中变量的值不被改变。</h3><h3 id="3-3修饰方法：方法只能使用，不能重载。"><a href="#3-3修饰方法：方法只能使用，不能重载。" class="headerlink" title="3.3修饰方法：方法只能使用，不能重载。"></a>3.3修饰方法：方法只能使用，不能重载。</h3><p>final?修饰符（关键字）如果一个类被声明为final，意味着它不能再派生出新的子类，不能作为父类被继承。因此一个类不能既被声明为 abstract的，又被声明为final的。将变量或方法声明为final，可以保证它们在使用中不被改变。被声明为final的变量必须在声明时给定 初值，而在以后的引用中只能读取，不可修改。被声明为final的方法也同样只能使用，不能重载. </p>
 <p>finally?再异常处理时提供 finally 块来执行任何清除操作。如果抛出一个异常，那么相匹配的 catch 子句就会执行，然后控制就会进入 finally 块（如果有的话）。  </p>
 <p>finalize?方法名。Java 技术允许使用 finalize() 方法在垃圾收集器将对象从内存中清除出去之前做必要的清理工作。这个方法是由垃圾收集器在确定这个对象没有被引用时对这个对象调用的。它是在 Object 类中定义的，因此所有的类都继承了它。子类覆盖 finalize() 方法以整理系统资源或者执行其他清理工作。finalize() 方法是在垃圾收集器删除对象之前对这个对象调用的。 </p>
 <h1 id="Anonymous-Inner-Class-匿名内部类-是否可以extends-继承-其它类，是否可以implements-实现-interface-接口"><a href="#Anonymous-Inner-Class-匿名内部类-是否可以extends-继承-其它类，是否可以implements-实现-interface-接口" class="headerlink" title="Anonymous Inner Class (匿名内部类) 是否可以extends(继承)其它类，是否可以implements(实现)interface(接口)?"></a>Anonymous Inner Class (匿名内部类) 是否可以extends(继承)其它类，是否可以implements(实现)interface(接口)?</h1><p>匿名的内部类是没有名字的内部类。不能extends(继承) 其它类，但一个内部类可以作为一个接口，由另一个内部类实现。</p>
@@ -103,123 +114,342 @@
 <h1 id="是否可以继承String类"><a href="#是否可以继承String类" class="headerlink" title="是否可以继承String类?"></a>是否可以继承String类?</h1><p>String类是final类故不可以继承。 </p>
 <h1 id="try-里有一个return语句，那么紧跟在这个try后的finally-里的code会不会被执行，什么时候被执行，在return前还是后"><a href="#try-里有一个return语句，那么紧跟在这个try后的finally-里的code会不会被执行，什么时候被执行，在return前还是后" class="headerlink" title="try {}里有一个return语句，那么紧跟在这个try后的finally {}里的code会不会被执行，什么时候被执行，在return前还是后?"></a>try {}里有一个return语句，那么紧跟在这个try后的finally {}里的code会不会被执行，什么时候被执行，在return前还是后?</h1><p>会执行，在return前执行。  </p>
 <h1 id="编程题-用最有效率的方法算出2乘以8等於几"><a href="#编程题-用最有效率的方法算出2乘以8等於几" class="headerlink" title="编程题: 用最有效率的方法算出2乘以8等於几?"></a>编程题: 用最有效率的方法算出2乘以8等於几?</h1><p>有C背景的程序员特别喜欢问这种问题。 2 &lt;&lt; 3  </p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/08/22/java/" data-id="cis5tutsr00003gq7t0vd9ysm" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
-    
-<nav id="article-nav">
-  
-    <a href="/2016/08/22/设计模式/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          设计模式
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2016/08/22/study无止境/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">study无止境</div>
-    </a>
-  
-</nav>
-
-  
-</article>
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a></li></ul>
-    </div>
-  </div>
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
 
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2016/08/22/设计模式/">设计模式</a>
-          </li>
-        
-          <li>
-            <a href="/2016/08/22/java/">java</a>
-          </li>
-        
-          <li>
-            <a href="/2016/08/22/study无止境/">study无止境</a>
-          </li>
-        
-          <li>
-            <a href="/2016/08/22/倒排与检索/">倒排与检索</a>
-          </li>
-        
-          <li>
-            <a href="/2016/08/22/markdown/">markdown</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
+</div>
 
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2016 Reality<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://yoursite.com/2016/08/22/java/" data-title="java | sunshine" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
 </footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2016/08/22/设计模式/" title="设计模式">
+  <strong>上一篇：</strong><br/>
+  <span>
+  设计模式</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2016/08/22/study无止境/"  title="study无止境">
+ <strong>下一篇：</strong><br/> 
+ <span>study无止境
+</span>
+</a>
+</div>
+
 </nav>
-    
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	
 
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
-
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#谈谈final-finally-finalize的区别。"><span class="toc-number">1.</span> <span class="toc-text">谈谈final, finally, finalize的区别。</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#final修饰"><span class="toc-number">1.1.</span> <span class="toc-text">final修饰</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1修饰类：该类不能派生子类，不能作为父类被继承。"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1修饰类：该类不能派生子类，不能作为父类被继承。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2修饰变量：保证在使用中变量的值不被改变。"><span class="toc-number">1.1.2.</span> <span class="toc-text">2.2修饰变量：保证在使用中变量的值不被改变。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3修饰方法：方法只能使用，不能重载。"><span class="toc-number">1.1.3.</span> <span class="toc-text">3.3修饰方法：方法只能使用，不能重载。</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Anonymous-Inner-Class-匿名内部类-是否可以extends-继承-其它类，是否可以implements-实现-interface-接口"><span class="toc-number">2.</span> <span class="toc-text">Anonymous Inner Class (匿名内部类) 是否可以extends(继承)其它类，是否可以implements(实现)interface(接口)?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#amp-和-amp-amp-的区别。"><span class="toc-number">3.</span> <span class="toc-text">&和&&的区别。</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Collection-和-Collections的区别。"><span class="toc-number">4.</span> <span class="toc-text">Collection 和 Collections的区别。</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#GC是什么-为什么要有GC-基础-。"><span class="toc-number">5.</span> <span class="toc-text">GC是什么? 为什么要有GC? (基础)。</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#sleep-和-wait-有什么区别-搞线程的最爱"><span class="toc-number">6.</span> <span class="toc-text">sleep() 和 wait() 有什么区别? 搞线程的最爱</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Overload和Override的区别。Overloaded的方法是否可以改变返回值的类型"><span class="toc-number">7.</span> <span class="toc-text">Overload和Override的区别。Overloaded的方法是否可以改变返回值的类型?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Set里的元素是不能重复的，那么用什么方法来区分重复与否呢-是用-还是equals-它们有何区别"><span class="toc-number">8.</span> <span class="toc-text">Set里的元素是不能重复的，那么用什么方法来区分重复与否呢? 是用==还是equals()? 它们有何区别?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#abstract-class和interface有什么区别"><span class="toc-number">9.</span> <span class="toc-text">abstract class和interface有什么区别?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#是否可以继承String类"><span class="toc-number">10.</span> <span class="toc-text">是否可以继承String类?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#try-里有一个return语句，那么紧跟在这个try后的finally-里的code会不会被执行，什么时候被执行，在return前还是后"><span class="toc-number">11.</span> <span class="toc-text">try {}里有一个return语句，那么紧跟在这个try后的finally {}里的code会不会被执行，什么时候被执行，在return前还是后?</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#编程题-用最有效率的方法算出2乘以8等於几"><span class="toc-number">12.</span> <span class="toc-text">编程题: 用最有效率的方法算出2乘以8等於几?</span></a></li></ol>
+ 
   </div>
-</body>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+
+
+  
+
+  
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://coderq.com" target="_blank" title="一个面向程序员交流分享的新一代社区">码农圈</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://wuchong.me" target="_blank" title="Jark&#39;s Blog">Jark&#39;s Blog</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+  <div class="weiboshow">
+  <p class="asidetitle">新浪微博</p>
+    <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=null&verifier=b3593ceb&dpc=1"></iframe>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m Larry Page in Google. <br/>
+			This is my blog,believe it or not.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/2176287895" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2016 
+		
+		<a href="/about" target="_blank" title="Reality">Reality</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e6d1f421bbc9962127a50488f9ed37d1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
 </html>
