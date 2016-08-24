@@ -4,29 +4,29 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>redis总结 | sunshine</title>
+    <title>hexo简单操作 | sunshine</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Reality">
     
 
     
-    <meta name="description" content="1.介绍：redis是一个高性能的key-value数据库存储系统，数据存储在内存中；读写速度快，并可持久化到磁盘。
-缺点：基于内存管理，也就是自己申请内存管理数据，当进程重启或者挂了就会丢失数据，所以可以考虑使用内存文件系统，只要系统部重启数据不会丢失，细节参见：http://blog.nosqlfan.com/html/3638.html
-     数据库容量受到物理内存的限制,不能用作海量数">
+    <meta name="description" content="cd hexo目录下
+新建：hexo new “file_name”
+同步git  hexo clean  hexo d -g (hexo generate,hexo deploy)*提交本地  hexo s -g(hexo generate,hexo server)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="redis总结">
-<meta property="og:url" content="http://yoursite.com/2016/08/24/redis总结/index.html">
+<meta property="og:title" content="hexo简单操作">
+<meta property="og:url" content="http://yoursite.com/2016/08/24/hexo简单操作/index.html">
 <meta property="og:site_name" content="sunshine">
-<meta property="og:description" content="1.介绍：redis是一个高性能的key-value数据库存储系统，数据存储在内存中；读写速度快，并可持久化到磁盘。
-缺点：基于内存管理，也就是自己申请内存管理数据，当进程重启或者挂了就会丢失数据，所以可以考虑使用内存文件系统，只要系统部重启数据不会丢失，细节参见：http://blog.nosqlfan.com/html/3638.html
-     数据库容量受到物理内存的限制,不能用作海量数">
-<meta property="og:updated_time" content="2016-08-24T12:30:03.352Z">
+<meta property="og:description" content="cd hexo目录下
+新建：hexo new “file_name”
+同步git  hexo clean  hexo d -g (hexo generate,hexo deploy)*提交本地  hexo s -g(hexo generate,hexo server)">
+<meta property="og:updated_time" content="2016-08-24T12:32:47.511Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="redis总结">
-<meta name="twitter:description" content="1.介绍：redis是一个高性能的key-value数据库存储系统，数据存储在内存中；读写速度快，并可持久化到磁盘。
-缺点：基于内存管理，也就是自己申请内存管理数据，当进程重启或者挂了就会丢失数据，所以可以考虑使用内存文件系统，只要系统部重启数据不会丢失，细节参见：http://blog.nosqlfan.com/html/3638.html
-     数据库容量受到物理内存的限制,不能用作海量数">
+<meta name="twitter:title" content="hexo简单操作">
+<meta name="twitter:description" content="cd hexo目录下
+新建：hexo new “file_name”
+同步git  hexo clean  hexo d -g (hexo generate,hexo deploy)*提交本地  hexo s -g(hexo generate,hexo server)">
 
     
     <link rel="alternative" href="/atom.xml" title="sunshine" type="application/atom+xml">
@@ -86,14 +86,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/08/24/redis总结/" title="redis总结" itemprop="url">redis总结</a>
+      <a href="/2016/08/24/hexo简单操作/" title="hexo简单操作" itemprop="url">hexo简单操作</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Reality" target="_blank" itemprop="author">Reality</a>
 		
   <p class="article-time">
-    <time datetime="2016-08-24T12:25:35.000Z" itemprop="datePublished"> 发表于 2016-08-24</time>
+    <time datetime="2016-08-24T12:30:23.000Z" itemprop="datePublished"> 发表于 2016-08-24</time>
     
   </p>
 </header>
@@ -102,35 +102,16 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-介绍："><span class="toc-number">1.</span> <span class="toc-text">1.介绍：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-应用："><span class="toc-number">2.</span> <span class="toc-text">2.应用：</span></a></li></ol>
+			
 		
 		</div>
 		
-		<h2 id="1-介绍："><a href="#1-介绍：" class="headerlink" title="1.介绍："></a>1.介绍：</h2><pre><code>redis是一个高性能的key-value数据库存储系统，数据存储在内存中；读写速度快，并可持久化到磁盘。
-缺点：基于内存管理，也就是自己申请内存管理数据，当进程重启或者挂了就会丢失数据，所以可以考虑使用内存文件系统，只要系统部重启数据不会丢失，细节参见：http://blog.nosqlfan.com/html/3638.html
-     数据库容量受到物理内存的限制,不能用作海量数据的高性能读写,因此Redis适合的场景主要局限在较小数据量的高性能操作和运算上。
-</code></pre><h2 id="2-应用："><a href="#2-应用：" class="headerlink" title="2.应用："></a>2.应用：</h2><pre><code> Redis支持五种数据类型：string（字符串），hash（哈希），list（列表），set（集合）及zset(sorted set：有序集合)。
- 启动：
-      1.启动redis---------./redis-server
-      2.连接redis---------./redis-cli -h 127.0.0.1 -p 6379
-List列表：
-放：(key为“yangli”)
-LPUSH yangli redis
-LPUSH yangli is
-LPUSH yangli so
-LPUSH yangli good
-输出：
-LRANGE yangli 0 10
-Set集合（不允许插入重复的元素）
-放：
-SADD yangli redis
-SADD yangli is
-SADD yangli good
-SADD yangli good（不成功）
-输出:
-SMEMBERS redis
-教程：http://www.runoob.com/redis/redis-tutorial.html
-</code></pre>  
+		<ul>
+<li>cd hexo目录下</li>
+<li>新建：hexo new “file_name”</li>
+<li>同步git<br>  hexo clean<br>  hexo d -g (hexo generate,hexo deploy)<br>*提交本地<br>  hexo s -g(hexo generate,hexo server)</li>
+</ul>
+  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
@@ -142,7 +123,7 @@ SMEMBERS redis
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2016/08/24/redis总结/" data-title="redis总结 | sunshine" data-tsina="null" class="share clearfix">
+	  <div data-url="http://yoursite.com/2016/08/24/hexo简单操作/" data-title="hexo简单操作 | sunshine" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -155,19 +136,11 @@ SMEMBERS redis
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2016/08/24/hexo简单操作/" title="hexo简单操作">
-  <strong>上一篇：</strong><br/>
-  <span>
-  hexo简单操作</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2016/08/22/海量数据处理/"  title="海量数据处理">
+<a href="/2016/08/24/redis总结/"  title="redis总结">
  <strong>下一篇：</strong><br/> 
- <span>海量数据处理
+ <span>redis总结
 </span>
 </a>
 </div>
@@ -182,7 +155,7 @@ SMEMBERS redis
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-介绍："><span class="toc-number">1.</span> <span class="toc-text">1.介绍：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-应用："><span class="toc-number">2.</span> <span class="toc-text">2.应用：</span></a></li></ol>
+ 
  
   </div>
 
