@@ -4,29 +4,47 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>hexo简单操作 | sunshine</title>
+    <title>shell总结 | sunshine</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Reality">
     
 
     
-    <meta name="description" content="cd hexo目录下
-新建：hexo new “file_name”
-同步git  hexo clean  hexo d -g (hexo generate,hexo deploy)*提交本地  hexo s -g(hexo generate,hexo server)">
+    <meta name="description" content="传输：ftp和wget  eg: ftp://hostname``pwd/目标文件名
+wget 路径
+
+压缩和减压  eg：打包：tar czvf yang.tar.gz yangli
+解压：tar xzvf yangli.tar.gz
+
+定时任务crontab  eg：crontab -l
+crontab -e
+/5 * * * *(cd /home/video/baishi; sh shou">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo简单操作">
-<meta property="og:url" content="http://yoursite.com/2016/08/24/hexo简单操作/index.html">
+<meta property="og:title" content="shell总结">
+<meta property="og:url" content="http://yoursite.com/2016/08/25/shell总结/index.html">
 <meta property="og:site_name" content="sunshine">
-<meta property="og:description" content="cd hexo目录下
-新建：hexo new “file_name”
-同步git  hexo clean  hexo d -g (hexo generate,hexo deploy)*提交本地  hexo s -g(hexo generate,hexo server)">
-<meta property="og:updated_time" content="2016-08-24T12:32:47.511Z">
+<meta property="og:description" content="传输：ftp和wget  eg: ftp://hostname``pwd/目标文件名
+wget 路径
+
+压缩和减压  eg：打包：tar czvf yang.tar.gz yangli
+解压：tar xzvf yangli.tar.gz
+
+定时任务crontab  eg：crontab -l
+crontab -e
+/5 * * * *(cd /home/video/baishi; sh shou">
+<meta property="og:updated_time" content="2016-08-25T06:55:23.176Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo简单操作">
-<meta name="twitter:description" content="cd hexo目录下
-新建：hexo new “file_name”
-同步git  hexo clean  hexo d -g (hexo generate,hexo deploy)*提交本地  hexo s -g(hexo generate,hexo server)">
+<meta name="twitter:title" content="shell总结">
+<meta name="twitter:description" content="传输：ftp和wget  eg: ftp://hostname``pwd/目标文件名
+wget 路径
+
+压缩和减压  eg：打包：tar czvf yang.tar.gz yangli
+解压：tar xzvf yangli.tar.gz
+
+定时任务crontab  eg：crontab -l
+crontab -e
+/5 * * * *(cd /home/video/baishi; sh shou">
 
     
     <link rel="alternative" href="/atom.xml" title="sunshine" type="application/atom+xml">
@@ -86,14 +104,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/08/24/hexo简单操作/" title="hexo简单操作" itemprop="url">hexo简单操作</a>
+      <a href="/2016/08/25/shell总结/" title="shell总结" itemprop="url">shell总结</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Reality" target="_blank" itemprop="author">Reality</a>
 		
   <p class="article-time">
-    <time datetime="2016-08-24T12:30:23.000Z" itemprop="datePublished"> 发表于 2016-08-24</time>
+    <time datetime="2016-08-25T06:09:02.000Z" itemprop="datePublished"> 发表于 2016-08-25</time>
     
   </p>
 </header>
@@ -107,9 +125,82 @@
 		</div>
 		
 		<ul>
-<li>cd hexo目录下</li>
-<li>新建：hexo new “file_name”</li>
-<li>同步git<br>  hexo clean<br>  hexo d -g (hexo generate,hexo deploy)<br>*提交本地<br>  hexo s -g(hexo generate,hexo server)</li>
+<li><p>传输：ftp和wget<br>  eg: ftp://<code>hostname``pwd</code>/目标文件名</p>
+<pre><code>wget 路径
+</code></pre></li>
+<li><p>压缩和减压<br>  eg：打包：tar czvf yang.tar.gz yangli</p>
+<pre><code>解压：tar xzvf yangli.tar.gz
+</code></pre></li>
+<li><p>定时任务crontab<br>  eg：crontab -l</p>
+<pre><code>crontab -e
+/5 * * * *(cd /home/video/baishi; sh shoulv_ctl.sh &gt;&gt; log/shoulv_ctl_yy 2&gt;&amp;1;）----每5分钟执行一次
+2&gt;&amp;1：将标准错误重定向到标准输出中，其中0：标准输入，1：标准输出，2：标准错误
+</code></pre></li>
+<li><p>转码iconv<br>  参数：-f, –from-code=名称 原始文本编码</p>
+<pre><code>-t, --to-code=名称 输出编码
+</code></pre><p>  eg：iconv -f utf-8 -t gbk all_data.u.sorted &gt; 123</p>
+</li>
+<li><p>linux-windows传输<br>  sz：linux-&gt;windows<br>  rz：window-&gt;linux</p>
+</li>
+<li><p>文本搜索grep<br>  eg：1.在文件中搜索一个单词，命令会返回一个包含“match_pattern”的文本行：</p>
+<pre><code>    grep match_pattern file_name
+2.在多个文件中查找：
+    grep &quot;match_pattern&quot; file_1 file_2 file_3 ...
+3.在多级目录中对文本进行递归搜索：
+    grep &quot;text&quot; . -r -n # .表示当前目录。
+</code></pre></li>
+<li><p>显示进程ps</p>
+<ol>
+<li>ps -ef是显示当前所有进程</li>
+<li>ps -ef | grep“shoulv_start.php”在当前进程中查找shoulv的所有信息</li>
+</ol>
+</li>
+<li><p>输出命令</p>
+<blockquote>
+<p>：创建</p>
+<blockquote>
+<p>：追加</p>
+</blockquote>
+</blockquote>
+</li>
+<li><p>vim的一些设置<br>  编码：set enconding=utf-8<br>  行数：set nu<br>  显示间隔符：set  list<br>  set  ts=20</p>
+</li>
+<li><p>vim设置编码<br>  在vim ~/.vimrc文件中修改</p>
+</li>
+<li><p>查看文件命令<br>  cat</p>
+<pre><code>cat命令的用途是连接文件或标准输入并打印。这个命令常用来显示文件内容，或者将几个文件连接起来显示，或者从标准输入读取内容并显示，它常与重定向符号配合使用。 
+cat主要有三大功能：
+    1.一次显示整个文件:cat filename
+    2.从键盘创建一个文件:cat &gt; filename 只能创建新文件,不能编辑已有文件.
+    3.将几个文件合并为一个文件:cat file1 file2 &gt; file
+</code></pre><p>  head和tail：</p>
+<pre><code>head 用来显示档案的开头至标准输出中，默认head命令打印其相应文件的开头10行。
+    eg:显示文件的前n行-&gt;head -n 5 log2014.log
+        显示文件前n个字节-&gt;head -c 20 log2014.log
+        输出文件除了最后n行的全部内容-&gt;head -n -6 log2014.log
+tail 想当然尔就是看档案的结尾。 
+</code></pre><p>  more</p>
+<pre><code>more命令，功能类似 cat ，cat命令是整个文件的内容从上到下显示在屏幕上。 more会以一页一页的显示方便使用者逐页阅读，而最基本的指令就是按空白键（space）就往下一页显示，按 b 键就会往回（back）一页显示，而且还有搜寻字串的功能 。more命令从前向后读取文件，因此在启动时就加载整个文件。
+</code></pre><p>  less</p>
+<pre><code>less 工具也是对文件或其它输出进行分页显示的工具，应该说是linux正统查看文件内容的工具，功能极其强大。less 的用法比起 more 更加的有弹性。在 more 的时候，我们并没有办法向前面翻， 只能往后面看，但若使用了 less 时，就可以使用 [pageup] [pagedown] 等按键的功能来往前往后翻看文件，更容易用来查看一个文件的内容！
+除此之外，在less 里头可以拥有更多的搜索功能，不止可以向下搜，也可以向上搜。
+</code></pre></li>
+<li><p>其他命令</p>
+<pre><code>切换用户：sudo -iu video
+sudo安装软件
+grep 在文件中查找某个字符串
+pwd显示当前目录
+ifconfig查看网络情况
+ping测试网络
+clear
+mkdir
+cp复制
+mv
+rm -r递归删除，删除目录和文件
+chmod
+mkdir      
+touch
+</code></pre></li>
 </ul>
   
 	</div>
@@ -123,7 +214,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2016/08/24/hexo简单操作/" data-title="hexo简单操作 | sunshine" data-tsina="null" class="share clearfix">
+	  <div data-url="http://yoursite.com/2016/08/25/shell总结/" data-title="shell总结 | sunshine" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -136,19 +227,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2016/08/25/shell总结/" title="shell总结">
-  <strong>上一篇：</strong><br/>
-  <span>
-  shell总结</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2016/08/24/redis总结/"  title="redis总结">
+<a href="/2016/08/24/hexo简单操作/"  title="hexo简单操作">
  <strong>下一篇：</strong><br/> 
- <span>redis总结
+ <span>hexo简单操作
 </span>
 </a>
 </div>
